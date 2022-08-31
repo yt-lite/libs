@@ -1,4 +1,4 @@
-module github.com/hiiamtrong/yt-lite-libs
+module github.com/yt-lite/libs
 
 go 1.18
 
