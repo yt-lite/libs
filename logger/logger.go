@@ -24,32 +24,32 @@ func init() {
 	sugar = zapLog.Sugar()
 }
 
-func Info(message string, fields interface{}) {
-	sugar.Info(message, fields)
+func Info(message string) {
+	sugar.Info(message)
 }
 
 func Infof(message string, fields interface{}) {
 	sugar.Infof(message, fields)
 }
 
-func Infoln(message string, fields interface{}) {
-	sugar.Infoln(message, fields)
+func Infoln(message string) {
+	sugar.Infoln(message)
 }
 
-func Warnln(message string, fields interface{}) {
-	sugar.Warnln(message, fields)
+func Warnln(message string) {
+	sugar.Warnln(message)
 }
 
 func Warnf(message string, args ...interface{}) {
 	sugar.Warnf(message, args...)
 }
 
-func Warn(message string, fields interface{}) {
-	sugar.Warn(message, fields)
+func Warn(message string) {
+	sugar.Warn(message)
 }
 
-func Debug(message string, fields interface{}) {
-	sugar.Debug(message, fields)
+func Debug(message string) {
+	sugar.Debug(message)
 }
 
 func Debugf(message string, fields interface{}) {
@@ -60,33 +60,33 @@ func Errorf(message string, fields interface{}) {
 	sugar.Errorf(message, fields)
 }
 
-func Errorln(message string, fields interface{}) {
-	sugar.Errorln(message, fields)
+func Errorln(message string) {
+	sugar.Errorln(message)
 }
 
-func Error(message string, fields interface{}) {
+func Error(message string) {
 	sugar.Error(message)
 }
 
-func Fatal(message string, fields interface{}) {
-	sugar.Fatal(message, fields)
+func Fatal(message string) {
+	sugar.Fatal(message)
 }
 
 func Fatalf(message string, fields interface{}) {
 	sugar.Fatalf(message, fields)
 }
-func Fatalln(message string, fields interface{}) {
-	sugar.Fatalln(message, fields)
+func Fatalln(message string) {
+	sugar.Fatalln(message)
 }
 
 func Panicf(message string, fields interface{}) {
 	sugar.Panicf(message, fields)
 }
 
-func Panicln(message string, fields interface{}) {
-	sugar.Panicln(message, fields)
+func Panicln(message string) {
+	sugar.Panicln(message)
 }
 
-func Panic(message string, fields interface{}) {
-	sugar.Panic(message, fields)
+func Panic(message string) {
+	sugar.Panic(message)
 }
