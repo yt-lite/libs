@@ -6,6 +6,7 @@ import (
 )
 
 var zapLog *zap.Logger
+var sugar *zap.SugaredLogger
 
 func init() {
 	var err error
@@ -20,24 +21,72 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
+	sugar = zapLog.Sugar()
 }
 
-func Info(message string, fields ...zap.Field) {
-	zapLog.Info(message, fields...)
+func Info(message string, fields interface{}) {
+	sugar.Info(message, fields)
 }
 
-func Debug(message string, fields ...zap.Field) {
-	zapLog.Debug(message, fields...)
+func Infof(message string, fields interface{}) {
+	sugar.Infof(message, fields)
 }
 
-func Error(message string, fields ...zap.Field) {
-	zapLog.Error(message, fields...)
+func Infoln(message string, fields interface{}) {
+	sugar.Infoln(message, fields)
 }
 
-func Fatal(message string, fields ...zap.Field) {
-	zapLog.Fatal(message, fields...)
+func Warnln(message string, fields interface{}) {
+	sugar.Warnln(message, fields)
 }
 
-func Panic(message string, fields ...zap.Field) {
-	zapLog.Panic(message, fields...)
+func Warnf(message string, args ...interface{}) {
+	sugar.Warnf(message, args...)
+}
+
+func Warn(message string, fields interface{}) {
+	sugar.Warn(message, fields)
+}
+
+func Debug(message string, fields interface{}) {
+	sugar.Debug(message, fields)
+}
+
+func Debugf(message string, fields interface{}) {
+	sugar.Debugf(message, fields)
+}
+
+func Errorf(message string, fields interface{}) {
+	sugar.Errorf(message, fields)
+}
+
+func Errorln(message string, fields interface{}) {
+	sugar.Errorln(message, fields)
+}
+
+func Error(message string, fields interface{}) {
+	sugar.Error(message)
+}
+
+func Fatal(message string, fields interface{}) {
+	sugar.Fatal(message, fields)
+}
+
+func Fatalf(message string, fields interface{}) {
+	sugar.Fatalf(message, fields)
+}
+func Fatalln(message string, fields interface{}) {
+	sugar.Fatalln(message, fields)
+}
+
+func Panicf(message string, fields interface{}) {
+	sugar.Panicf(message, fields)
+}
+
+func Panicln(message string, fields interface{}) {
+	sugar.Panicln(message, fields)
+}
+
+func Panic(message string, fields interface{}) {
+	sugar.Panic(message, fields)
 }
