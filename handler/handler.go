@@ -18,8 +18,9 @@ func WriteResponse(w http.ResponseWriter, status int, body interface{}) {
 	}
 }
 
-func WriteError(w http.ResponseWriter, err errs.AppError) {
+func WriteError(w http.ResponseWriter, err *errs.AppError) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(err.Code)
 	w.Write([]byte(err.Error()))
 }
+
